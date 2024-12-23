@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var showActivityWindow: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ZStack {
+                Color.indigo.edgesIgnoringSafeArea(.all)
+                
+                Button {
+                    showActivityWindow.toggle()
+                } label: {
+                    Text("Start Unclutching")
+                        .padding(20)
+                        .foregroundStyle(.white)
+                        .background(.green)
+                        .cornerRadius(15)
+                }
+                .sheet(isPresented: $showActivityWindow) {
+                    AppPicker()
+                }
+            }
         }
-        .padding()
+        
     }
 }
 

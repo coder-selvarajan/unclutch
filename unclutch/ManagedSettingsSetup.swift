@@ -1,8 +1,8 @@
 //
 //  ManagedSettingsSetup.swift
-//  Activity Analyser
+//  unclutch
 //
-//  Created by Selvarajan on 23/08/23.
+//  Created by Selvarajan on 23/12/24.
 //
 
 import ManagedSettings
